@@ -25,6 +25,7 @@ def find_anagram(string)
 #Return anagrams in array
 anagrams
 
+
 end
 
 
