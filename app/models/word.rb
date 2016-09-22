@@ -1,16 +1,18 @@
 class Word
 	
+
+	
 	def self.find_anagrams(string)
 	
-	letters = string.split(//)
+	$letters = string.split(//)	
 	
 	anagrams = []
 	
-		letters.each do |letter|
-		remaining = letters.select { |l| l !=letter }
+		$letters.each do |letter|
+		remaining = $letters.select { |l| l !=letter }
 		
 		anagrams << letter + remaining.join('')
-		anagrams << letter + reverse_letters(remaining).join('')
+		anagrams << letter + reverse_letters.join('')
 	end
 	
 	anagrams
@@ -19,11 +21,11 @@ class Word
 
 	def self.reverse_letters
 	
-		length = letters.length
+		length = $letters.length
 		reversed_letters = Array.new(length)
 		
-		letters.each_with_index do |letter, index|
-			reversed_letters[letters - length - 1] = letter
+		$letters.each_with_index do |letter, index|
+			reversed_letters[length - index - 1] = letter
 	end
 	
 	reversed_letters
