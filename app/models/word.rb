@@ -1,4 +1,4 @@
-class Word
+class Word < ActiveRecord::Base
 	
 
 	
