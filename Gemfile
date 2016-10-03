@@ -11,3 +11,4 @@ gem 'rspec'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'puma'
+gem 'byebug', require: false
