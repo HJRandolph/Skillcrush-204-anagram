@@ -3,13 +3,16 @@ development:
   database: numerology_development
   pool: 5
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
     
 test:
   adapter: postgresql
   database: numerology_test
   pool: 5
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
+  
+production:
+  url: <%= ENV['DATABASE_URL'] %>
