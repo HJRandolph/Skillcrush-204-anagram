@@ -1,8 +1,17 @@
 <div id="show">
-<h1>Anagrams for the Word <%= "#{@word}" %></h1>
+<h2>Anagrams for the Word</h2><h1><%= "#{@word}" %></h1>
 <ul>
 	<% @anagrams.each do |anagram| %>
 	<li><%= "#{anagram}" %></li>
 	<% end %>
 </ul>
+
+<div>
+	<p class="more">Do you think there should be more anagrams here?</p>
+	<section class="slide"><a href="#">Add them here</a></section>
+	<section><a href="#">See all the words</a></section>
+
+</div>
+
+
 </div>

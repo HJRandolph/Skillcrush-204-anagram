@@ -30,7 +30,16 @@ h1 {
 	color: #fd395e;
 	text-align: center;
 	text-transform: uppercase;
+	text-decoration: underline;
 	font-size: 56.45pt;
+}
+
+h2 {
+
+	color: #fd395e;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36pt;
 }
 
 .emph {
@@ -40,6 +49,24 @@ h1 {
 	font-size: 25pt;
 	font-family: 'open sans', sans-serif;
 	font-style: italic;
+}
+
+.more {
+	color: #555555;
+	text-transform: capitalize;
+	text-align: center;
+	font-size: 15pt;
+	font-family: 'open sans', sans-serif;
+}
+
+a {
+	color: #fd395e;
+}
+
+.slide {
+	float: left;
+	margin-right: 25%;
+	margin-left: 25%;
 }
 
 #wordform {
@@ -70,5 +97,5 @@ ul, li {
 	font-size: 4rem;
 	list-style-type: none;
 	color: #fd395e;
-	text-align: center;
+	margin-left: 24%;
 }
