@@ -6,14 +6,20 @@ class Word < ActiveRecord::Base
 	#require 'byebug'
 	#byebug
 	letters = string.split(//)	
-	
+	combos = []
 	anagrams = []
 	
 		letters.each do |letter|
 		remaining = letters.select { |l| l !=letter }
 		
-		anagrams << letter + remaining.join('')
-		anagrams << letter + reverse_letters(remaining).join('')
+		combos << letter + remaining.join('')
+		combos << letter + reverse_letters(remaining).join('')
+	end
+	
+	combos.each do |word|
+		if Word.find_by_text(word).present?
+			anagrams << word
+		end
 	end
 	
 	anagrams
