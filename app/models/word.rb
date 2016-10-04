@@ -21,7 +21,7 @@ class Word < ActiveRecord::Base
 			anagrams << word
 		end
 	end
-	
+	anagrams = anagrams.uniq
 	anagrams
 end
 

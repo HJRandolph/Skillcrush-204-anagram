@@ -5,7 +5,7 @@ body {
 }
 
 #container {
-	width: auto;
+	width: 940px;
 	height: 960px;
 	margin: auto;
 	background-image: url('images/tiles-03.png');
@@ -15,8 +15,18 @@ body {
 }
 
 
-h1 {
+#show {
 	width: 940px;
+	height: 960px;
+	margin: auto;
+	background-image: url('images/tiles-02.png');
+	background-position: 0% 75%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+h1 {
+
 	color: #fd395e;
 	text-align: center;
 	text-transform: uppercase;
