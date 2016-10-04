@@ -32,6 +32,11 @@ h1 {
 	text-transform: uppercase;
 	text-decoration: underline;
 	font-size: 56.45pt;
+	line-height: 27.7pt;
+}
+
+#show h1 {
+	margin-top: -2%;
 }
 
 h2 {
