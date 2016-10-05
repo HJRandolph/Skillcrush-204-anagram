@@ -5,7 +5,7 @@ body {
 }
 
 #container {
-	width: 940px;
+
 	height: 960px;
 	margin: auto;
 	background-image: url('images/tiles-03.png');
@@ -102,5 +102,13 @@ ul, li {
 	font-size: 4rem;
 	list-style-type: none;
 	color: #fd395e;
-	margin-left: 24%;
+	text-align: center;
+}
+
+.error {
+	text-align: center;
+	color: red;
+	border: 5px solid red;
+	font-size: 25pt;
+	font-family: 'open sans', sans-serif;
 }
