@@ -12,5 +12,6 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'puma'
 gem 'byebug', require: false
+gem 'minitest'
 
 ruby '2.3.0'

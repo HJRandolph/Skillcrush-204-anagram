@@ -112,3 +112,8 @@ ul, li {
 	font-size: 25pt;
 	font-family: 'open sans', sans-serif;
 }
+
+.back {
+	margin-top: 4em;
+	text-align: center;
+}
