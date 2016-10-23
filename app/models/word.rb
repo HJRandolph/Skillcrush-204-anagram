@@ -22,6 +22,7 @@ class Word < ActiveRecord::Base
 		end
 	end
 	anagrams = anagrams.uniq
+	anagrams.delete_if { |copy| copy == string }
 	anagrams
 end
 
