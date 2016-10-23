@@ -25,13 +25,27 @@ def distinct_letters?(input)
 end
 
 #Combine the previous two checks
-def valid_input?(input)
-    if three_letters?(input) && distinct_letters?(input)
-      true
-    else
-      false
-    end
+#def valid_input?(input)
+ #   if three_letters?(input) && distinct_letters?(input)
+  #    true
+   # else
+    #  false
+   # end
+#end
+
+#Refactor valid_input
+def valid_input(input)
+	letter_array = input.chars
+	unique_letters = letter_array.uniq
+	
+	if input.length > 3
+		raise Exception.new("Word must be less than or equal to three characters.")
+	elsif unique_letters.length < letter_array.length
+		raise Exception.new("Word must not contain duplicate letters.")
+	end
+	
 end
+
 
 
 
@@ -43,11 +57,10 @@ end
 
 post '/' do
 	@word = params[:word]
-	if valid_input?(@word)
+	begin valid_input(@word)
 	redirect "/anagrams/#{@word}"
-	else 
-
-	@error = "Words must be three letters long and cannot contain duplicate letters."
+	rescue Exception => error
+	@error = error.message
 	erb :index
 	end
 end
