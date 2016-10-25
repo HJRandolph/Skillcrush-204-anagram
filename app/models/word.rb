@@ -1,15 +1,13 @@
 class Word < ActiveRecord::Base
   before_create :add_letters
 	
-def add_letters
-	characters = self.text.chars
+def add_letters(input)
+	characters = input.text.chars
 	alphabetized_characters = characters.sort
-	self.letters = alphabetized_characters.join
+	input.letters = alphabetized_characters.join
 end
 	
 	def self.find_anagrams(string)
-	#require 'byebug'
-	#byebug
 	letters = string.split(//)	
 	combos = []
 	anagrams = []
@@ -27,7 +25,7 @@ end
 		end
 	end
 	anagrams = anagrams.uniq
-	anagrams.delete_if { |copy| copy == string }
+	anagrams.delete_if { |copy| copy == input }
 	anagrams
 end
 
