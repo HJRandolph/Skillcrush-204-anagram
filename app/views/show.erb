@@ -2,7 +2,7 @@
 <h2>Anagrams for the Word</h2><h1><%= "#{@word}" %></h1>
 <ul>
 	<% @anagrams.each do |anagram| %>
-	<li><%= "#{anagram}" %></li>
+	<li><%= "#{anagram.text}" %></li>
 	<% end %>
 </ul>
 
