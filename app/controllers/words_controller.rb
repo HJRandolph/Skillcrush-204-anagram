@@ -3,6 +3,7 @@ get '/words' do
 	erb :"/words/index"
 end
 
+
 get '/words/:word' do
 	@word = Word.find(params[:word])
 	erb :"/words/show"
