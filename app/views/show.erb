@@ -3,9 +3,11 @@
 <div id="show">
 <h2>Anagrams for the Word</h2><h1><%= "#{@word}" %></h1>
 <ul>
+<% if !@anagrams.nil? %>
 	<% @anagrams.each do |anagram| %>
 	<li><%= "#{anagram.text}" %></li>
 	<% end %>
+<% end %>
 </ul>
 
 <div>
