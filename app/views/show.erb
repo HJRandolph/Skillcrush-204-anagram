@@ -1,20 +1,31 @@
+
+<div id="container">
 <div id="show">
 <h2>Anagrams for the Word</h2><h1><%= "#{@word}" %></h1>
 <ul>
+<<<<<<< HEAD
 	<% if !@anagrams.nil? %>
 	<% @anagrams.each do |anagram| %>
 	<li><%= "#{anagram.text}" %></li>
 	<% end %>
+=======
+<% if !@anagrams.nil? %>
+	<% @anagrams.each do |anagram| %>
+	<li><%= "#{anagram.text}" %></li>
+>>>>>>> longer-words
 	<% end %>
+<% end %>
 </ul>
 
 <div>
 	<p class="more">Do you think there should be more anagrams here?</p>
-	<section class="slide"><a href="#">Add them here</a></section>
-	<section><a href="#">See all the words</a></section>
-
+	<div class="push">
+		<p class="col-md-6"><a href="#">Add them here</a></p>
+		<p class="col-md-6"><a href="/words">See all the words</a></p>
+	</div>
 </div>
 
 <div class="back"><a href="/">Back to the generator!</a></div>
 </div>
 
+</div>

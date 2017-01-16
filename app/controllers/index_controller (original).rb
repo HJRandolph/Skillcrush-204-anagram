@@ -38,42 +38,28 @@ def valid_input(input)
 	letter_array = input.chars
 	unique_letters = letter_array.uniq
 	
-	if input.length != 3
-		raise Exception.new("Word must equal three characters.")
+	if input.length > 3
+		raise Exception.new("Word must be less than or equal to three characters.")
 	elsif unique_letters.length < letter_array.length
 		raise Exception.new("Word must not contain duplicate letters.")
 	end
 	
 end
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> longer-words
-#get '/anagrams/:word' do
-#	@word = params[:word]
-#	@anagrams = Word.find_anagrams(@word)
-#	erb :show
-#end
-<<<<<<< HEAD
-=======
-
-
 get '/anagrams/:word' do
 	@word = params[:word]
 	word_array = @word.chars.sort
 	alphabetized_string = word_array.join
 	@anagrams = Word.where("letters=?", alphabetized_string)
+
 	erb :show
 end
->>>>>>> longer-words
 
-get '/anagrams/' do
-	erb :index
-end
-
-
+#get '/anagrams/:word' do
+#	@word = params[:word]
+#	@anagrams = Word.find_anagrams(@word)
+#	erb :show
+#end
 
 post '/' do
 	@word = params[:word]
@@ -83,12 +69,4 @@ post '/' do
 	@error = error.message
 	erb :index
 	end
-end
-
-get '/anagrams/:word' do
-	@word = params[:word]
-	word_array = @word.chars.sort
-	alphabetized_string = word_array.join
-	@anagrams = Word.where("letters=?", alphabetized_string)
-	erb :show
 end
