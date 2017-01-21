@@ -47,11 +47,17 @@ def valid_input(input)
 end
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> longer-words
 #get '/anagrams/:word' do
 #	@word = params[:word]
 #	@anagrams = Word.find_anagrams(@word)
 #	erb :show
 #end
+<<<<<<< HEAD
+=======
 
 
 get '/anagrams/:word' do
@@ -61,6 +67,7 @@ get '/anagrams/:word' do
 	@anagrams = Word.where("letters=?", alphabetized_string)
 	erb :show
 end
+>>>>>>> longer-words
 
 get '/anagrams/' do
 	erb :index
@@ -76,4 +83,12 @@ post '/' do
 	@error = error.message
 	erb :index
 	end
+end
+
+get '/anagrams/:word' do
+	@word = params[:word]
+	word_array = @word.chars.sort
+	alphabetized_string = word_array.join
+	@anagrams = Word.where("letters=?", alphabetized_string)
+	erb :show
 end
