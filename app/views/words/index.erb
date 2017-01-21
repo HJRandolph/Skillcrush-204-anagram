@@ -13,7 +13,7 @@
 	 <% @word.each do |word| %>
 	  <tr>
 	  	<td>
-	  	<a href="<%= "/anagrams/#{word.text}" %>">
+	  	<a href="<%= "/words/#{word.id}" %>">
 	  	<%= "#{word.text}" %></a></td>
 	  	<td><%= "#{word.letters}" %></td>
 	  </tr>

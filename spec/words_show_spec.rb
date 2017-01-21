@@ -14,7 +14,7 @@ describe 'Our Anagrams App' do
     end    
   end
   
-  it "shows a page with a word's text and it's letters following a get request to /words/:id" do
+  it "shows a page with a word's text and its letters following a get request to /words/:id" do
     get("/words/#{@word.id}")
     expect(last_response.body).to include("#{@word.text}", "#{@word.letters}")
   end
