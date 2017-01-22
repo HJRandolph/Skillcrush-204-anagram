@@ -4,25 +4,25 @@ end
 
 
 #Determine if the input is a three letter word 
-def three_letters?(input)
-	if input.length <= 3
-		true
-	else
-		false
-	end
-end
+#def three_letters?(input)
+#	if input.length <= 3
+#		true
+#	else
+#		false
+#	end
+#end
 
 #Determine that the words does not have repeating letters
-def distinct_letters?(input)
-	letter_array = input.chars
-	unique_letters = letter_array.uniq
+#def distinct_letters?(input)
+#	letter_array = input.chars
+#	unique_letters = letter_array.uniq
 	
-		if unique_letters.length < letter_array.length
-			false
-		else
-			true
-		end
-end
+#		if unique_letters.length < letter_array.length
+#			false
+#		else
+#			true
+#		end
+#end
 
 #Combine the previous two checks
 #def valid_input?(input)
@@ -46,34 +46,17 @@ def valid_input(input)
 	
 end
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> longer-words
 #get '/anagrams/:word' do
 #	@word = params[:word]
-#	@anagrams = Word.find_anagrams(@word)
+#	word_array = @word.chars.sort
+#	alphabetized_string = word_array.join
+#	@anagrams = Word.where("letters=?", alphabetized_string)
 #	erb :show
 #end
-<<<<<<< HEAD
-=======
-
-
-get '/anagrams/:word' do
-	@word = params[:word]
-	word_array = @word.chars.sort
-	alphabetized_string = word_array.join
-	@anagrams = Word.where("letters=?", alphabetized_string)
-	erb :show
-end
->>>>>>> longer-words
 
 get '/anagrams/' do
 	erb :index
 end
-
-
 
 post '/' do
 	@word = params[:word]

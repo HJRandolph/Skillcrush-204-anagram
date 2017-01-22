@@ -1,3 +1,4 @@
+
 class Word < ActiveRecord::Base
   before_create :add_letters
 	
