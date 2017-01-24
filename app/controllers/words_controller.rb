@@ -6,5 +6,4 @@ end
 get '/words/:id' do
 	@word = Word.find(params[:id])
 	erb :"/words/show"
-end
-
+end	
