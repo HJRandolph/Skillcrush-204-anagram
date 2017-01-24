@@ -8,9 +8,3 @@ get '/words/:id' do
 	erb :"/words/show"
 end
 
-
-get '/words/:word' do
-	@word = Word.find(params[:word])
-	erb :"/words/show"
-end
-
