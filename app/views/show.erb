@@ -9,6 +9,12 @@
 	<li><%= "#{anagram.text}" %></li>
 
 	<% end %>
+
+<% if !@anagrams.nil? %>
+	<% @anagrams.each do |anagram| %>
+	<li><%= "#{anagram.text}" %></li>
+
+	<% end %>
 <% end %>
 </ul>
 
