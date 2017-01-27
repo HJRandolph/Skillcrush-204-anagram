@@ -2,10 +2,10 @@
 class Word < ActiveRecord::Base
   before_create :add_letters
 	
-def add_letters(input)
-	characters = input.text.chars
+def add_letters
+	characters = self.text.chars
 	alphabetized_characters = characters.sort
-	input.letters = alphabetized_characters.join
+	self.letters = alphabetized_characters.join
 end
 	
 	def self.find_anagrams(string)
