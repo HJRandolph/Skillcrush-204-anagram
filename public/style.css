@@ -57,6 +57,15 @@ h2 {
 	font-style: italic;
 }
 
+
+.norm {
+	color: #555555;
+	text-transform: capitalize;
+	text-align: center;
+	font-size: 25pt;
+	font-family: 'open sans', sans-serif;
+}
+
 .more {
 	color: #555555;
 	text-transform: capitalize;
@@ -75,6 +84,13 @@ a {
 }
 
 #word {
+	height: 90px;
+	width: 650px;
+	font-size: 25pt;
+	text-align: center;
+}
+
+#new_word {
 	height: 90px;
 	width: 650px;
 	font-size: 25pt;

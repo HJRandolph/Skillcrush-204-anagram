@@ -8,7 +8,7 @@ def add_letters
 	self.letters = alphabetized_characters.join
 end
 	
-	def self.find_anagrams(string)
+def self.find_anagrams(string)
 	letters = string.split(//)	
 	combos = []
 	anagrams = []
@@ -18,7 +18,7 @@ end
 		
 		combos << letter + remaining.join('')
 		combos << letter + reverse_letters(remaining).join('')
-	end
+		end
 	
 	combos.each do |word|
 		if Word.find_by_text(word).present?

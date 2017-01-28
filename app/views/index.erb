@@ -1,6 +1,6 @@
 <div id="container">
 <div id="contain">
-<h1>Add a word:</h1>
+<h1>find a word</h1>
 
 <% if @error.present? %>
   <p class='error'><%= "#{@error}" %></p>
@@ -12,7 +12,7 @@
   <label class="emph" for="word">3 letter words ONLY please!</label><br />
   <input type="text" name="word" id="word">
   <br />
-  <input type="submit" class="btn" value="Add a word">
+  <input type="submit" class="btn" value="View Anagrams">
 </form>
 <div class="back"><p><a href="/words">See all the words!</a></p></div>
 </div>
