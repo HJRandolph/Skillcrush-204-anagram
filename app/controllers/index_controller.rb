@@ -46,23 +46,6 @@ def valid_input(input)
 	
 end
 
-#get '/anagrams/:word' do
-#	@word = params[:word]
-#	word_array = @word.chars.sort
-#	alphabetized_string = word_array.join
-#	@anagrams = Word.where("letters=?", alphabetized_string)
-#	erb :show
-#end
-
-
-
-get '/anagrams/:word' do
-	@word = params[:word]
-	word_array = @word.chars.sort
-	alphabetized_string = word_array.join
-	@anagrams = Word.where("letters=?", alphabetized_string)
-	erb :show
-end
 
 
 get '/anagrams/' do
