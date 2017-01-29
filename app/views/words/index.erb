@@ -8,6 +8,7 @@
 	<thead>
 	 <th>Words</th>
 	 <th>Letters</th>
+	 <th colspan=2>Actions</th>
 	</thead>
 	<tbody>
 	 <% @word.each do |word| %>
@@ -16,6 +17,8 @@
 	  	<a href="<%= "/words/#{word.id}" %>">
 	  	<%= "#{word.text}" %></a></td>
 	  	<td><%= "#{word.letters}" %></td>
+	  	<td><a href="<%= "/words/#{word.id}/edit" %>">Edit</a></td>
+	  	<td>Delete</td>
 	  </tr>
 	<% end %>
 	</tbody>
