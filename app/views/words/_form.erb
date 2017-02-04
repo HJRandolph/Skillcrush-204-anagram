@@ -1,7 +1,7 @@
 
 <div id="wordform">
 	<form action="<%= word_form_action(@word) %>" method="post" class="<%= word_form_class(@word) %>" id="<%= word_form_id(@word) %>">
-		<label for="new_word" class="norm">Enter a word </label>
+		<label for="f_word" class="norm">Enter a word </label>
 		<p>
 		<input type="hidden" name="_method" value="<%= word_form_method(@word) %>" />
 			<input type="text" name="f_word" id="word"></input>

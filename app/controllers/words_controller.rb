@@ -27,9 +27,9 @@ end
 
 
 put '/words/:id' do
-	word = Word.find(params[:id])
-	word.text = params[:f_word]
-	word.save
+	@word = Word.find(params[:id])
+	@word.text = params[:f_word]
+	@word.save
 	erb :"/words/show"
 end
 
