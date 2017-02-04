@@ -10,7 +10,7 @@ end
 
 
 post '/words' do
-	@word = Word.create(text: params[:f_word].downcase)
+	@word = Word.create(text: params[:f_word])
 	redirect "words/#{@word.id}"
 end
 
@@ -34,7 +34,7 @@ put '/words/:id' do
 end
 
 delete '/words/:id' do
-	@word = Word.find(params[:id])
-	@word.delete
+	remove = Word.find(params[:id])
+	remove.delete
 	redirect "/words"
 end
