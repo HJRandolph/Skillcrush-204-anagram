@@ -10,8 +10,8 @@ end
 
 
 post '/words' do
-	word = Word.create(text: params[:text])
-	redirect "words/#{word.id}"
+	@word = Word.create(text: params[:text])
+	redirect "words/#{@word.id}"
 end
 
 
@@ -27,14 +27,14 @@ end
 
 
 put '/words/:id' do
-	@word = Word.find(params[:id])
-	@word.text = params[:f_word]
-	@word.save
+	word = Word.find(params[:id])
+	word.text = params[:f_word]
+	word.save
 	erb :"/words/show"
 end
 
 delete '/words/:id' do
-	word = Word.find(params[:id])
-	word.delete
+	@word = Word.find(params[:id])
+	@word.delete
 	redirect "/words"
 end
