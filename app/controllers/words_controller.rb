@@ -34,7 +34,7 @@ put '/words/:id' do
 end
 
 delete '/words/:id' do
-	remove = Word.find(params[:id])
-	remove.delete
+	word = Word.find(params[:id])
+	word.delete
 	redirect "/words"
 end
