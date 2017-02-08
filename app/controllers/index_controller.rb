@@ -34,17 +34,17 @@ end
 #end
 
 #Refactor valid_input
-#def valid_input(input)
-#	letter_array = input.chars
-#	unique_letters = letter_array.uniq
-#	
-#	if input.length != 3
-#		raise Exception.new("Word must equal three characters.")
-#	elsif unique_letters.length < letter_array.length
-#		raise Exception.new("Word must not contain duplicate letters.")
-#	end
+def valid_input(input)
+	letter_array = input.chars
+	unique_letters = letter_array.uniq
 	
-#end
+	if input.length != 3
+		raise Exception.new("Word must equal three characters.")
+	elsif unique_letters.length < letter_array.length
+		raise Exception.new("Word must not contain duplicate letters.")
+	end
+	
+end
 
 
 
@@ -54,12 +54,12 @@ end
 
 post '/' do
 	@word = params[:word].downcase
-#	begin valid_input(@word)
+	begin valid_input(@word)
 	redirect "/anagrams/#{@word}"
-#	rescue Exception => error
-#	@error = error.message
+	rescue Exception => error
+	@error = error.message
 	erb :index
-#	end
+	end
 end
 
 get '/anagrams/:word' do
