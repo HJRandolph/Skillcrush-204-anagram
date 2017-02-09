@@ -11,9 +11,9 @@ module ApplicationHelper
 	
 	def word_form_action(word)
 		if @word.new_record?
-			@action = "/words"
+			@action = "/dictionary"
 		else
-			@action = "/words/#{@word.id}"
+			@action = "/dictionary/#{@word.id}"
 		end
 		@action 
 	end

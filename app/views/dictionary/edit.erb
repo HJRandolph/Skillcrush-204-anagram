@@ -2,16 +2,16 @@
 
 <div id="contain">
 
-<h1>Add a new word!</h1>
+<h1>Edit <%= "#{@word.text}" %></h1>
 
-<%= erb :"/words/_form" %>
+<%= erb :"/dictionary/_form" %>
 
 
 <div>
 <p>&nbsp;</p>
 	<div class="push">
 		<p class="col-md-6"><a href="/">Back to the generator!</a></p>
-		<p class="col-md-6"><a href="/words">See all the words</a></p>
+		<p class="col-md-6"><a href="/dictionary">See all the words</a></p>
 	</div>
 </div>
 

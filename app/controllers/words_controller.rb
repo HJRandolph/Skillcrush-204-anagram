@@ -1,40 +1,40 @@
-get '/words' do
+get '/dictionary' do
 	@word = Word.all
-	erb :"/words/index"
+	erb :"/dictionary/index"
 end
 
-get '/words/new' do
+get '/dictionary/new' do
 	@word = Word.new
-	erb :"/words/new"
+	erb :"/dictionary/new"
 end
 
 
-post '/words' do
+post '/dictionary' do
     @word = Word.create(text: params[:text])
-    redirect "/words/#{@word.id}"
+    redirect "/dictionary/#{@word.id}"
   end
 
 
-get '/words/:id' do
+get '/dictionary/:id' do
 	@word = Word.find(params[:id])
-	erb :"/words/show"
+	erb :"/dictionary/show"
 end	
 
-get '/words/:id/edit' do
+get '/dictionary/:id/edit' do
 	@word = Word.find(params[:id])
-	erb :"words/edit"
+	erb :"dictionary/edit"
 end
 
 
-put '/words/:id' do
+put '/dictionary/:id' do
 	@word = Word.find(params[:id])
 	@word.text = params[:text]
 	@word.save
-	erb :"/words/show"
+	erb :"/dictionary/show"
 end
 
-delete '/words/:id' do
+delete '/dictionary/:id' do
 	word = Word.find(params[:id])
 	word.delete
-	redirect "/words"
+	redirect "/dictionary"
 end
