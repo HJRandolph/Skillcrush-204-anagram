@@ -54,7 +54,7 @@ get '/anagrams/' do
 end
 
 post '/' do
-	@word = params[:word].downcase
+	@word = params[:word]
 	#begin valid_input(@word)
 	redirect "/anagrams/#{@word}"
 	#rescue Exception => error
@@ -64,7 +64,7 @@ post '/' do
 end
 
 get '/anagrams/:word' do
-	@word = params[:word].downcase
+	@word = params[:word]
 	word_array = @word.chars.sort
 	alphabetized_string = word_array.join
 	@anagrams = Word.where("letters=?", alphabetized_string)
