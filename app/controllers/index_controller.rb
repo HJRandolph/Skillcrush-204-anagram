@@ -54,7 +54,7 @@ get '/anagrams/' do
 end
 
 post '/' do
-	@word = params[:word]
+	@word = params[:word].downcase
 	#begin valid_input(@word)
 	redirect "/anagrams/#{@word}"
 	#rescue Exception => error
