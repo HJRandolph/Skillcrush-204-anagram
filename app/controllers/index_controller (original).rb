@@ -13,16 +13,16 @@ def three_letters?(input)
 end
 
 #Determine that the words does not have repeating letters
-def distinct_letters?(input)
-	letter_array = input.chars
-	unique_letters = letter_array.uniq
+#def distinct_letters?(input)
+#	letter_array = input.chars
+#	unique_letters = letter_array.uniq
 	
-		if unique_letters.length < letter_array.length
-			false
-		else
-			true
-		end
-end
+#		if unique_letters.length < letter_array.length
+#			false
+#		else
+#			true
+#		end
+#end
 
 #Combine the previous two checks
 #def valid_input?(input)
@@ -34,17 +34,17 @@ end
 #end
 
 #Refactor valid_input
-def valid_input(input)
-	letter_array = input.chars
-	unique_letters = letter_array.uniq
+#def valid_input(input)
+#	letter_array = input.chars
+#	unique_letters = letter_array.uniq
 	
-	if input.length > 3
-		raise Exception.new("Word must be less than or equal to three characters.")
-	elsif unique_letters.length < letter_array.length
-		raise Exception.new("Word must not contain duplicate letters.")
-	end
+#	if input.length > 3
+#		raise Exception.new("Word must be less than or equal to three characters.")
+#	elsif unique_letters.length < letter_array.length
+#		raise Exception.new("Word must not contain duplicate letters.")
+#	end
 	
-end
+#end
 
 get '/anagrams/:word' do
 	@word = params[:word]
@@ -62,11 +62,11 @@ end
 #end
 
 post '/' do
-	@word = params[:word]
-	begin valid_input(@word)
+	@word = params[:word].downcase
+	#begin valid_input(@word)
 	redirect "/anagrams/#{@word}"
-	rescue Exception => error
-	@error = error.message
-	erb :index
-	end
+	#rescue Exception => error
+	#@error = error.message
+	#erb :index
+	#end
 end
