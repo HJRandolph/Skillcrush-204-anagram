@@ -34,18 +34,18 @@ end
 #end
 
 #Refactor valid_input
-#def valid_input(input)
-#	letter_array = input.chars
-#	unique_letters = letter_array.uniq
+def valid_input(input)
+	letter_array = input.chars
+	unique_letters = letter_array.uniq
 	
 
-#	if input.length != 3
-#		raise Exception.new("Word must equal three characters.")
-#	elsif unique_letters.length < letter_array.length
-#		raise Exception.new("Word must not contain duplicate letters.")
-#	end
+	if input.length != 3
+		raise Exception.new("Word must equal three characters.")
+	elsif unique_letters.length < letter_array.length
+		raise Exception.new("Word must not contain duplicate letters.")
+	end
 	
-#end
+end
 
 
 
