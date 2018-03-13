@@ -14,4 +14,4 @@ gem 'puma'
 gem 'byebug', require: false
 gem 'minitest'
 
-ruby '2.3.0'
+ruby '2.4.0'
