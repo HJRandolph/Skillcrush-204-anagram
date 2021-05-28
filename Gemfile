@@ -10,8 +10,8 @@ gem 'rake'
 gem 'rspec'
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'puma'
+gem 'puma', '>= 4.3.8'
 gem 'byebug', require: false
 gem 'minitest'
 
-ruby '2.6.6'
+ruby '2.7.2'
